@@ -18,14 +18,27 @@ namespace Recursion
             {
                 Console.Write("Please enter a number: ");
             }
+            /*
             int factorial = 1;
-
             for (int i = 1; i <= n; i++)
             {
                 factorial = factorial * i;
             }
+            */
+
+            int factorial = calculateFactorial(n);
 
             Console.WriteLine($"{n}! is {factorial}");
+        }
+
+        static int calculateFactorial(int n)
+        {
+            if (n == 1) 
+            {
+                return 1;
+            }
+
+            return n * calculateFactorial(n-1);
         }
     }
 }
